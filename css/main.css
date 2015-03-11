@@ -1799,7 +1799,7 @@ video.videoLoop {
     }
     .contenido2 h2{
         margin: 15px 0px 15px 0px !important;
-        width: 910px;
+        width: 600px;
         display: -webkit-box;
         position: relative;
         top: 8px;
@@ -1809,12 +1809,12 @@ video.videoLoop {
         float: left;
     }
     .contenido2>.con2Scroll{
-        float: left;
+        float: right;
         
         overflow: auto;
-        position: absolute!important;
+/*        position: absolute!important;*/
         margin: 14px 0 0 13px !important;
-/*        width: 98%;*/
+        width: 650px;
         height: 250px;
         -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
         text-align: justify;
@@ -1822,7 +1822,7 @@ video.videoLoop {
     .contenido2 p{
         margin: 0px 0px 0px 0px;
         float: left !important;
-        width: 910px;
+        width: 600px;
     }
     .contenido2 a{
         color: white;
@@ -1840,7 +1840,7 @@ video.videoLoop {
     .contenido2 .sangria{
         left: 18px;
         position: relative;
-        width: 920px;
+        width: 600px;
         margin: 3px 10px 0px 0px;
     }
     /**/
@@ -1932,7 +1932,8 @@ video.videoLoop {
         float: left;
         margin: 10px 0px 15px 20px;
         padding-right: 5px;
-        width: 30.5%;
+        width: 29%;
+/*        font-size: 12.6px;*/
     }
     .vinetas>p:first-child{
         font-family: 'BentonSansCondMedium';
