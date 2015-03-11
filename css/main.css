@@ -1344,6 +1344,7 @@ video.videoLoop {
         position: initial;
         /* width: 40%!important; */
         font-family: 'BentonSansCondMedium';
+        text-align: left;
 	}
 
 	.parrafoHome{
@@ -1354,6 +1355,7 @@ video.videoLoop {
         line-height: 30px;
         margin: 0;
         letter-spacing: -0.5px;
+        display: block;
 	}
 
 	/*.redes{
@@ -1810,14 +1812,15 @@ video.videoLoop {
     }
     .contenido2>.con2Scroll{
         float: right;
-        
+        position: absolute;
+        right: 0px;
         overflow: auto;
-/*        position: absolute!important;*/
         margin: 14px 0 0 13px !important;
         width: 650px;
         height: 250px;
         -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
         text-align: justify;
+        display: none;
     }
     .contenido2 p{
         margin: 0px 0px 0px 0px;
@@ -1843,6 +1846,24 @@ video.videoLoop {
         width: 600px;
         margin: 3px 10px 0px 0px;
     }
+    .contenido2>ul{
+        position: absolute;
+        width: 300px;
+        list-style-type: none;
+        margin: 35px 0px 0px;
+        padding: 0px;
+    }
+    .contenido2>ul>li{
+        text-decoration: none;
+    }
+    .contenido2>ul>li>p{
+        font-family: 'BentonSansCondMedium';
+        font-size: 20px;
+        margin-bottom: 15px;
+        display: block;
+        width: 300px;
+    }
+    
     /**/
     .contenido3{
         width: 100%;
@@ -1917,12 +1938,12 @@ video.videoLoop {
         margin-left: 18px;
     }
     .tablaDer{
-        width: 670px;
+        width: 360px;
         float: left;
         margin: 15px 0 15px 0;
     }
     .tablaDer>p{
-        width: 640px;
+        width: 340px;
     }
     .tablaDer>.conSpace{
         width: 100%;
@@ -1985,7 +2006,7 @@ video.videoLoop {
     }
     .contenido1_S2>.parrafoHome{
         width: 440px;
-        margin: 165px 0 12px 0px;
+        margin: 333px 0 12px 0px;
         position: absolute;
         left: 0;
         font-size: 25px;

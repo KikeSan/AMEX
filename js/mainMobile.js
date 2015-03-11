@@ -5,6 +5,8 @@ $(document).ready(function(){
     var unaSolaVez = 0;
     var repInterna = 0;
     var TabPrev = 0;
+    var prevValor = 0;
+    var opColorArray=[null,'#92CD89','#F1CE7A','#A1A1A1'];
     localStorage.setItem("opTab", 1);
 //    $("#fullpage .section").bind("mousewheel", function() {return false;});
     
@@ -151,7 +153,7 @@ $(document).ready(function(){
     //        pintaTab(localStorage.getItem("opTab"));
 
             function pintaTab(tb,opc){
-                console.log("OPC en pintaTab: "+opc);
+//                console.log("OPC en pintaTab: "+opc);
                 
                 /*switch(opc){
                     case 1: $me.find('.menuTabs #'+tb).css('border-color', 'rgba(169,238,159, 0.5)'); 
@@ -200,7 +202,7 @@ $(document).ready(function(){
                     $me.find('.contenido2').css('display', 'none');
                     $me.find('.contenido3').css('display', 'none');
                 }
-                console.log("LOCALSTORAGE TAB: "+tb+" TabPrev:"+TabPrev);
+//                console.log("LOCALSTORAGE TAB: "+tb+" TabPrev:"+TabPrev);
                 
                 TweenMax.to($('#section1 #info'+opc+' .contenido'+TabPrev), 0.3, {css:{'display':'none', opacity:0}, ease:Back.easeOut});
                 TweenMax.to($('#section1 #info'+opc+' .contenido'+tb), 0.5, {css:{'display':'block', opacity:1}, delay:0.3, ease:Back.easeOut});
@@ -231,12 +233,53 @@ $(document).ready(function(){
 
              }
             
-             pintaTab(1,op);
+            pintaTab(1,op);
 
-             $me.find('.menuTabs #1').click(function(){ if(TabPrev!=1){ /*localStorage.setItem("opTab", 1);*/   pintaTab(1,op); }});
-             $me.find('.menuTabs #2').click(function(){ if(TabPrev!=2){ /*localStorage.setItem("opTab", 2);*/   pintaTab(2,op); }});
-             $me.find('.menuTabs #3').click(function(){ if(TabPrev!=3){ /*localStorage.setItem("opTab", 3);*/   pintaTab(3,op); }});
+            $me.find('.menuTabs #1').click(function(){ if(TabPrev!=1){ /*localStorage.setItem("opTab", 1);*/   pintaTab(1,op); }});
+            $me.find('.menuTabs #2').click(function(){ if(TabPrev!=2){ /*localStorage.setItem("opTab", 2);*/   pintaTab(2,op); }});
+            $me.find('.menuTabs #3').click(function(){ if(TabPrev!=3){ /*localStorage.setItem("opTab", 3);*/   pintaTab(3,op); }});
             
+            
+            /*----------  MENU PROGRAMAS  --------------*/
+            
+            function pintaInfoProgramas(val,opColor){
+                /*var $cantLi = $('.contenido2 #ul'+opColor+' li').size();
+                for(var i=1;i<=$cantLi;i++){
+                    $me.find('.contenido2 #ul'+opColor+' li #'+i).css('color','#fff !important');
+                    console.log("CANTIDAD de LI - "+$cantLi);
+                }*/
+//                $me.find('.contenido2 ul li #' + prevValor).css('color','#fff !important');
+                TweenMax.to($('#section1 #info'+op+' .contenido2 ul li #' + prevValor), 0.8, {css:{'color':'#ffffff'}, ease:Expo.easeOut});
+                TweenMax.to($('#section1 #info'+op+' .contenido2 ul li #' + val), 0.8, {css:{'color':opColorArray[opColor]}, ease:Expo.easeOut});
+//                $me.find(' .contenido2 ul li #' + val).css('color',opColorArray[opColor]);
+                console.log("COLOR PREV: "+prevValor+' current: '+val);
+                
+                /*$me.find(' .contenido2 #itm0' + val).css('display','block');
+                $me.find(' .contenido2 #itm0' + prevValor).css('display','none');*/
+                TweenMax.to($('#section1 #info'+op+' .contenido2 #itm0' + prevValor), 0.4, {css:{'display':'none', opacity:0}, ease:Expo.easeOut});
+                TweenMax.to($('#section1 #info'+op+' .contenido2 #itm0' + val), 0.5, {css:{'display':'block', opacity:1}, delay:0.4 , ease:Expo.easeOut});
+                
+                prevValor = val;
+
+                $('#section1 #info'+op+' .contenido2').find('.itemMenu').hover(function(){   
+                        if($(this).attr("id")!=prevValor){
+                            document.body.style.cursor='pointer'; 
+//                            $(this).css('color', opColorArray[opColor]);
+                            TweenMax.to($(this), 0.7, {css:{'color':opColorArray[opColor]}, ease:Expo.easeOut});
+                        }
+                    }, function(){    
+                        if($(this).attr("id")!=prevValor){
+                            document.body.style.cursor='default'; 
+//                            $(this).css('color', '#fff');  
+                            TweenMax.to($(this), 1, {css:{'color':'#fff'}, ease:Expo.easeOut});
+                        }
+                    })
+            }
+            
+            pintaInfoProgramas(1,op);
+            
+            $me.find('.contenido2 ul li .itemMenu').click(function(){ pintaInfoProgramas($(this).attr("id"), op); });
+
             repInterna = 1;
         }
     }
