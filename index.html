@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta name="viewport" content="user-scalable=no,initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
+	<title>Tarjeta de Crédito AMEX</title>
+	<meta name="author" content="Enrique Sánchez Q." />
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<!--    <link rel="stylesheet" type="text/css" href="css/font-awesome.css">-->
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
+	<link rel="stylesheet" type="text/css" href="css/mainfont.min.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.css" />
+    
+		
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<!--	<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>-->
+	<script type="text/javascript">!window.jQuery && document.write(unescape("%3Cscript src='js/jquery-1.10.1.min.js' type='text/javascript'%3E%3C/script%3E"));</script>
+	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+	<script type="text/javascript">!window.jQuery.ui && document.write(unescape("%3Cscript src='js/jquery-ui.min.js' type='text/javascript'%3E%3C/script%3E"));</script>
+	<script type="text/javascript" src='js/greensock/TweenMax.min.js'></script>
+	<script type="text/javascript" src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script type="text/javascript" src="js/jquery.fullPage.js"></script>
+	<script type="text/javascript" src="js/mainMobile.js"></script>
+    
+    <!-- simpleButton -->
+	<link rel="stylesheet" type="text/css" href="css/simpleButton.css">
+	<script type="text/javascript" src='js/simpleButton.js'></script>
+</head>
+<body>
+<div class="warning">
+	<p class="aviso">Para una mejor experiencia gira tu dispositivo</p>
+	<img src="img/iconoMobile.png">
+</div>
+
+<div class="lightBox" id="cerrarVideo"></div>
+<div class="visorVideo">
+<!--	<iframe id="elVideo" width="100%" height="100%" src="//www.youtube.com/embed/MBtfidpnEmU?rel=0&amp;controls=1&amp;showinfo=0&amp;autoplay=0&amp;html5=1&amp;allowfullscreen=true&amp;wmode=transparent&amp;enablejsapi=1" frameborder="0" allowfullscreen></iframe>-->
+</div>
+
+<header class='cabecera'>
+<!--    <img class="logo" src="img/logoHeader.png">-->
+    <div class="logo"></div>
+</header>
+   
+<div class="cerrarMenu"><img src="img/x.png" alt="cerrar"></div>
+<div class="abrirMenu"><i class="fa fa-bars fa-fw"></i></div>
+<div class="conteMenu">
+    <div class="fondomenu"></div>
+    <div class="redesHeader">
+		    <div class="simpleButtonImg">
+		     <img class="base" src="img/icnFace.svg">
+		     <img class="over" src="img/icnFaceOver.svg">
+		    </div>
+
+		    <div class="simpleButtonImg">
+		     <img class="base" src="img/icnTwit.svg">
+		     <img class="over" src="img/icnTwitOver.svg">
+		    </div>
+
+		    <div class="simpleButtonImg">
+		     <img class="base" src="img/icnYout.svg">
+		     <img class="over" src="img/icnYoutOver.svg">
+		    </div>
+    </div>
+    <!--<div class="redes">
+            <div><img id="iFac" src="img/icnFace.svg"/><img id="iFacOver" src="img/icnFaceOver.svg"/></div>
+            <div><img id="iTwi" src="img/icnTwit.svg"></div>
+            <div><img id="iYou" src="img/icnYout.svg"></div>
+    </div>-->
+    <div class="botonM" id="btnInicio">INICIO <i class="fa fa-angle-right fa-fw fa-lg"></i></div>
+<!--    <div class="botonM" id="btnConoce" >CONOCE NUESTRAS TARJETAS <i class="fa fa-angle-right fa-fw fa-lg"></i></div>-->
+    <div class="separador"></div>
+    <div class="botonSolicita" >SOLICITA TU TARJETA<i class="fa fa-angle-right fa-fw fa-lg"></i></div>
+    <p>American Express es una marca de American Express. Las tarjetas son emitidas por Interbank bajo licencia de American Express.</p>
+</div>  
+<div class="menuDerecha">
+    <div class="mitarjeta"><p>Mi Tarjeta</p><img id="activado" src="img/menuDerOver.png"><img id="normal" src="img/menuDer.png"><!--<i id="activado" class="fa fa-dot-circle-o fa-fw"></i><i class="fa fa-circle-thin fa-fw"></i>--></div>
+    <div class="mivida"><p>Mi vida</p><img id="activado" src="img/menuDerOver.png"><img id="normal"  src="img/menuDer.png"><!--<i id="activado" class="fa fa-dot-circle-o fa-fw"></i><i class="fa fa-circle-thin fa-fw"></i>--></div>
+</div>
+<div id="fullpage">
+    <!------- SECTION 0 ------->
+	<div class="section" id="section0">
+		
+		<ul class="categorias">
+			<li class="cat" id="cat_caminar">
+				<div class="velo"></div>
+				<h2 class="tituloReelDesk">Tarjeta American<br>Express®</h2>
+                <img src="img/card1.png" alt="American Express">
+			</li>
+			<li class="cat" id="cat_bailar">
+				<div class="velo"></div>
+				<h2 class="tituloReelDesk">Tarjeta American<br>Express® Gold</h2>
+				<img src="img/card2.png" alt="American Express Gold">
+			</li>
+			<li class="cat" id="cat_volar">
+				<div class="velo"></div>
+				<h2 class="tituloReelDesk">The Platinum Card® <br>American Express®</h2>
+				<img src="img/card3.png" alt="Platinum Card American Express">
+			</li>
+		</ul>
+	</div>
+
+	<!------- SECTION 1 ------->
+	<div class="section" id="section1">
+		<div class="fondoSection"></div>
+        <div class="contenidos" id="info1">    <!--***** INFO 1 *****-->
+            <h1 class="tituloHome">Tarjeta American Express®</h1>
+            <p class="parrafoHome">Compra con total confianza y comodidad.</p>
+            
+            <div class="menuTabs">
+                <div id="1"><img src="img/check.svg" alt="check"><p>Qué ventajas me ofrece la tarjeta  American Express® Gold</p></div>
+                <div id="2"><img src="img/check.svg" alt="check"><p>Además cuentas con los siguientes beneficios</p></div>
+                <div id="3"><img src="img/check.svg" alt="check"><p>Para solicitarla necesitas cumplir estos requisitos</p></div>
+            </div>
+            <div class="contenido1">
+                <img src="img/cExp.png" alt="American Express">
+                <div>
+                    <i class="fa fa-angle-right fa-fw"></i><p>Puedes usarla en toda la red de establecimientos American Express® alrededor del Mundo.</p>
+                    <i class="fa fa-angle-right fa-fw"></i><p>Diferentes formas de pago: Al contado, pagando el mínimo o hasta en 36 cuotas fijas.</p>
+                    <i class="fa fa-angle-right fa-fw"></i><p>Puedes pagar tu Tarjeta por la banca por internet, banca móvil, en la red de tiendas Interbank a nivel nacional, cajas de Vivanda, Plaza Vea y en los cajeros Plus Global Net.</p>
+                    <i class="fa fa-angle-right fa-fw"></i><p>Solicita hasta 8 tarjetas adicionales de manera gratuita y elige el límite de crédito de cada una.</p>
+                    <i class="fa fa-angle-right fa-fw"></i><p>Compra por Internet con total seguridad. </p>
+                </div>
+                <div class="BotonAzul"><div class="botonSolicita">SOLICITA TU TARJETA<i class="fa fa-angle-right fa-fw fa-lg"></i></div></div>
+            </div>
+            <div class="contenido2">
+<!--                <div>-->
+                <div class="con2Scroll mCustomScrollbar">
+                    <h2>1. Programa de seguros:</h2>
+                    <i class="fa fa-angle-right fa-fw"></i><p><strong>Seguro de protección de compras:</strong></p>
+                    <p class="sangria">Compra con tranquilidad con tu tarjeta American Express® gracias al seguro de compra protegida en caso de robo o daño del bien. Tienes hasta 90 días después de haber realizado la compra para poder hacer uso de este seguro (el articulo tiene que haber sido comprado con la tarjeta). <br><br>
+Cobertura: US$ 1,000 por incidente y hasta US$ 5,000 por año.</p>
+                    <i class="fa fa-angle-right fa-fw"></i><p><strong>Seguro de viajes:</strong></p>
+                    <p class="sangria">Al pagar la totalidad de tu viaje con tu tarjeta American Express®, tú, tu conyugue e hijos menores de 23 años cuentan con un seguro en caso de muerte accidental o incapacidad permanente si estas viajando en avión, tren, barco o autobús.<br><br>
+Cobertura: hasta por US$ 250,000</p>
+                    <i class="fa fa-angle-right fa-fw"></i><p>Encuentra más detalle de los seguros <a href="#">AQUÍ</a></p>
+                    
+                    <h2>2. Programa de Recompensas:</h2>
+                    <i class="fa fa-angle-right fa-fw"></i><p><strong>El programa de puntos más flexible de todo mercado.  Canjea puntos o millas con total facilidad.</strong></p>
+                    <p class="sangria">- Acumula 1 punto por cada S/.3.00.</p>
+                    <p class="sangria">- Tus Puntos Membership Rewards® nunca vencen mientras uses tu tarjeta.</p>
+                    <p class="sangria">- Las tarjetas adicionales también acumulan Puntos Membership Rewards® para el titular</p>
+                    
+                    <div class="vinetas">
+                        <p><i class="fa fa-plane fa-fw"></i>Viaja</p>
+                        <p>Transfiere tus puntos a millas de <br>Avianca y otras aerolíneas.</p>
+                    </div>
+                    <div class="vinetas">
+                        <p><i class="fa fa-gift fa-fw"></i>Canjear</p>
+                        <p>Ingresa a www.membershiprewards.pe <br>y descubre lo que puedes canjear</p>
+                    </div>
+                    <div class="vinetas">
+                        <p><i class="fa fa-money fa-fw"></i>Compra</p>
+                        <p>Usa tus puntos como efectivo en los <br>establecimientos asociados. </p>
+                    </div>
+                    
+                    <i class="fa fa-angle-right fa-fw"></i><p>Transfiere millas de las Aerolíneas: Taca, Avianca, KLM, Air France, Delta Airlines y Tam. Si no tienes tu número de pasajero frecuente solo debes inscribirte en sus páginas web, ¡no te tomará más de 10 minutos! Solo llama al (01) 311-9090</p>
+                    <i class="fa fa-angle-right fa-fw"></i><p>Conoce los establecimientos afiliados para comprar con puntos <a href="#">AQUÍ</a></p>
+                    <i class="fa fa-angle-right fa-fw"></i><p>Para canjear productos y más entra a www.membershiprewards.pe, elige el producto que más te gusta y llama al  (01) 311-9090. <br>
+Para mayor información visita www.membershiprewards.pe.</p>
+                    
+                    <h2>3. Pasaporte Amex:</h2>
+                    <i class="fa fa-angle-right fa-fw"></i><p>También te ofrecemos el “Pasaporte Amex “, un portal de American Express® que te brinda promociones especiales alrededor del mundo en restaurantes, hoteles, eventos y compras.<br>
+Descubre las ofertas que tenemos para ti en la web: <a href="#">www.pasaporteamex.com</a></p>
+                    <i class="fa fa-angle-right fa-fw"></i><p><strong>Requisitos:</strong></p>
+                    <p class="sangria">- Tener entre 21 y 75 años de edad.</p>
+                    <p class="sangria">- Ingreso bruto mínimo mensual personal de S/. 2,000.</p>
+                    <p class="sangria">- Más de 6 meses de experiencia crediticia con buen comportamiento de pago.</p>
+                    <p class="sangria">- Antigüedad laboral mayor a un 1 año.</p>
+                    <p class="sangria">- Fotocopia de documento de identidad.</p>
+                    <p class="sangria">- Último recibo de pago de luz cancelado.</p>
+                    <!--<ul>
+                        <li>- Tener entre 21 y 75 años de edad.</li>
+                        <li>- Ingreso bruto mínimo mensual personal de S/. 2,000.</li>
+                        <li>- Más de 6 meses de experiencia crediticia con buen comportamiento de pago.</li>
+                        <li>- Antigüedad laboral mayor a un 1 año.</li>
+                        <li>- Fotocopia de documento de identidad.</li>
+                        <li>- Último recibo de pago de luz cancelado.</li>
+                    </ul>-->
+                </div>
+                <div class="BotonAzul"><div class="botonSolicita">SOLICITA TU TARJETA<i class="fa fa-angle-right fa-fw fa-lg"></i></div></div>
+            </div>
+            <div class="contenido3">
+                <div class="con3Scroll mCustomScrollbar">
+                    <img src="img/cExp.png" alt="American Express">
+                    <div class="divDerecha">
+                        <i class="fa fa-angle-right fa-fw"></i><p>Tener entre 21 y 75 años de edad.</p>
+                        <i class="fa fa-angle-right fa-fw"></i><p>Ingreso bruto mínimo mensual personal de S/. 2,000.</p>
+                        <i class="fa fa-angle-right fa-fw"></i><p>Más de 6 meses de experiencia crediticia con buen comportamiento de pago.</p>
+                        <i class="fa fa-angle-right fa-fw"></i><p>Antigüedad laboral mayor a un (1) año.</p>
+                        <i class="fa fa-angle-right fa-fw"></i><p>Fotocopia de documento de identidad.</p>
+                        <i class="fa fa-angle-right fa-fw"></i><p>Último recibo de pago de luz cancelado.</p>
+                    </div>
+                    <div class="divNormal">
+                        <p>Además, si eres:</p>
+                        <h2>Dependiente</h2>
+                        <p>Última boleta de pago si recibes un ingreso fijo ó 3 últimas si tu ingreso es variable.</p>
+                        <h2>Independiente</h2>
+                        <p>Dos (2) últimas declaraciones anuales de impuesto a la renta de 4ta categoría y recibos por honorarios profesionales y/o pagos a Sunat de los últimos 3 meses.</p>
+                        <p>Dos (2) últimas declaraciones juradas del impuesto a la renta, contratos de alquiler, copia de autovalúo o propiedad arrendada y 2 últimos pagos a la Sunat, si eres rentista.
+<br><br>
+Copia de la constitución de la empresa, última declaración jurada de la empresa o ficha registral, estado de cuenta corriente de la empresa y 3 últimos pagos de IGV, si eres accionista de una pequeña empresa.</p>
+                    </div>
+                </div>
+                <div class="BotonAzul"><div class="botonSolicita">SOLICITA TU TARJETA<i class="fa fa-angle-right fa-fw fa-lg"></i></div></div>
+            </div>
+            
+        </div>
+        
+        <div class="contenidos" id="info2">    <!--***** INFO 2 *****-->
+            <h1 class="tituloHome">Tarjeta American Express® Gold</h1>
+            <p class="parrafoHome">Compra y viaja con total confianza y comodidad.</p>
+            
+            <div class="menuTabs">
+                <div id="1"><img src="img/check.svg" alt="check"><p>Qué ventajas me ofrece la tarjeta  American Express® Gold</p></div>
+                <div id="2"><img src="img/check.svg" alt="check"><p>Además cuentas con los siguientes beneficios</p></div>
+                <div id="3"><img src="img/check.svg" alt="check"><p>Para solicitarla necesitas cumplir estos requisitos</p></div>
+            </div>
+            <div class="contenido1">
+                <img src="img/cGold.png" alt="American Express Gold">
+                <div>
+                    <i class="fa fa-angle-right fa-fw"></i><p>Úsala en toda la red de establecimientos American Express® alrededor del Mundo.</p>
+                    <i class="fa fa-angle-right fa-fw"></i><p>Diferentes formas de pago: al contado, pagando el mínimo o hasta en 36 cuotas fijas. Consultar tarifario.</p>
+                    <i class="fa fa-angle-right fa-fw"></i><p>Puedes pagar tu Tarjeta por la banca por internet, banca móvil, en la red de tiendas Interbank a nivel nacional, cajas de Vivanda, Plaza Vea y en los cajeros Plus Global Net.</p>
+                    <i class="fa fa-angle-right fa-fw"></i><p>Solicita hasta 8 tarjetas adicionales de manera gratuita y elige el límite de crédito de cada una.</p>
+                    <i class="fa fa-angle-right fa-fw"></i><p>Compra por Internet con total seguridad. </p>
+                </div>
+                <div class="BotonAzul"><div class="botonSolicita">SOLICITA TU TARJETA<i class="fa fa-angle-right fa-fw fa-lg"></i></div></div>
+            </div>
+            <div class="contenido2">
+                <div class="con2Scroll mCustomScrollbar">
+                    <h2>1. Programa de Recompensas:</h2>
+                    <p class="sangria">El programa de puntos más flexible de todo el mercado.  Canjea puntos o millas con total facilidad.</p>
+                    <i class="fa fa-angle-right fa-fw"></i><p>Acumula 1.5 punto por cada S/.3.00.</p>
+                    <i class="fa fa-angle-right fa-fw"></i><p>Tus Puntos Membership Rewards® nunca vencen mientras uses tu tarjeta.</p>
+                    <i class="fa fa-angle-right fa-fw"></i><p>Las tarjetas adicionales también acumulan Puntos Membership Rewards® para el titular.</p>
+                    
+                    <div class="vinetas">
+                        <p><i class="fa fa-plane fa-fw"></i>Viaja</p>
+                        <p>Transfiere tus puntos a millas de <br>Avianca y otras aerolíneas.</p>
+                    </div>
+                    <div class="vinetas">
+                        <p><i class="fa fa-gift fa-fw"></i>Canjear</p>
+                        <p>Ingresa a www.membershiprewards.pe <br>y descubre lo que puedes canjear</p>
+                    </div>
+                    <div class="vinetas">
+                        <p><i class="fa fa-money fa-fw"></i>Compra</p>
+                        <p>Usa tus puntos como efectivo en los <br>establecimientos asociados. </p>
+                    </div>
+                    
+                    <i class="fa fa-angle-right fa-fw"></i><p>Transfiere millas de las Aerolíneas: Taca, Avianca, KLM, Air France, Delta Airlines y Tam. Si no tienes tu número de pasajero frecuente solo debes ingresar a sus páginas web e inscribirte, no te tomará más de 10 minutos!. Sólo llama al (01) 311-9090</p>
+                    <i class="fa fa-angle-right fa-fw"></i><p>Conoce los establecimientos afiliados para comprar con puntos <a href="#">AQUÍ</a></p>
+                    <i class="fa fa-angle-right fa-fw"></i><p>Para canjear productos y más entra a www.membershiprewards.pe, elige el producto que más te gusta y llama al  (01) 311-9090. <br>
+Para mayor información visita www.membershiprewards.pe.</p>
+                        
+                        
+                    
+                    <h2>2. Programa de seguros:</h2>
+                    <div class="acc-content">
+                    <div class="acc-content-inner">
+                    <i class="fa fa-angle-right fa-fw"></i><p>Seguro de protección de compras: <br>
+Compra con tranquilidad con tu tarjeta American Express®  Gold gracias al seguro de compra protegida en caso de robo o daño del bien. <br>Tienes hasta 90 días después de haber realizado la compra para poder hacer uso de este seguro (el articulo tiene que haber sido comprado con la tarjeta). <br>
+Cobertura: US$ 1,000 por incidente y hasta US$ 5,000 por año.</p>
+                    <i class="fa fa-angle-right fa-fw"></i><p>Seguros de viajes:<br>
+Al pagar la totalidad de tu viaje con tu tarjeta American Express ® Gold, tú, tu conyugue e hijos menores de 23 años cuentan con un seguro en caso de muerte accidental o incapacidad permanente si estas viajando en avión, tren, barco o autobús.<br>
+Cobertura: hasta por US$ 500,000 <br>
+Además cuentas con estos seguros:</p>
+                   <div class="tablaIzq">
+                       <i class="fa fa-angle-right fa-fw"></i><p><strong>Asistente de viajes</strong></p><br><br>
+                       <p class="conSpace">Pérdida de equipaje</p>
+                        <p class="conSpace">Demora e equipaje</p>
+                        <p class="conSpace">Seguro de vehículo alquilado (CDW)</p>
+                    </div>
+                    <div class="tablaDer">
+                       <i class="fa fa-angle-right fa-fw"></i><p><strong>US$ 10,000</strong></p><br><br>
+                        <p class="conSpace">US$ 1,000</p>
+                        <p class="conSpace">US$ 200</p>
+                        <p class="conSpace">Mundial: US$ 50,000</p>
+                    </div>
+                    <i class="fa fa-angle-right fa-fw"></i><p>Encuentra más detalle de los seguros <a href="#">AQUí</a></p>
+                    </div>
+                    </div>
+                    
+                    
+                    <h2>3. Pasaporte Amex:</h2>
+                    <p>También te ofrecemos el “Pasaporte Amex “, un portal de American Express ® Gold que te brinda promociones especiales alrededor del mundo en restaurantes, hoteles, eventos y compras. <br>
+                        Descubre las ofertas que tenemos para ti en la web: <a href="#">www.pasaporteamex.com</a></p>
+                    
+                    
+                </div>
+                <div class="BotonAzul"><div class="botonSolicita">SOLICITA TU TARJETA<i class="fa fa-angle-right fa-fw fa-lg"></i></div></div>
+            </div>
+            <div class="contenido3">
+                <div class="con3Scroll mCustomScrollbar">
+                    <img src="img/cGold.png" alt="American Express">
+                    <div class="divDerecha">
+                        <i class="fa fa-angle-right fa-fw"></i><p>Tener entre 21 y 75 años de edad.</p>
+                        <i class="fa fa-angle-right fa-fw"></i><p>Ingreso bruto mínimo mensual personal de S/. 4,000.</p>
+                        <i class="fa fa-angle-right fa-fw"></i><p>Más de 6 meses de experiencia crediticia con buen comportamiento de pago.</p>
+                        <i class="fa fa-angle-right fa-fw"></i><p>Antigüedad laboral mayor a un (1) año.</p>
+                        <i class="fa fa-angle-right fa-fw"></i><p>Fotocopia de documento de identidad.</p>
+                        <i class="fa fa-angle-right fa-fw"></i><p>Último recibo de pago de luz cancelado.</p>
+                    </div>
+                    <div class="divNormal">
+                        <p>Además, si eres:</p>
+                        <h2>Dependiente</h2>
+                        <p>Última boleta de pago si recibes un ingreso fijo ó 3 últimas si tu ingreso es variable.</p>
+                        <h2>Independiente</h2>
+                        <p>Dos (2) últimas declaraciones anuales de impuesto a la renta de 4ta categoría y recibos por honorarios profesionales y/o pagos a Sunat de los últimos 3 meses.</p>
+                        <p>Dos (2) últimas declaraciones juradas del impuesto a la renta, contratos de alquiler, copia de autovalúo o propiedad arrendada y 2 últimos pagos a la Sunat, si eres rentista.</p>
+                        <p>Copia de la constitución de la empresa, última declaración jurada de la empresa o ficha registral, estado de cuenta corriente de la empresa y 3 últimos pagos de IGV, si eres accionista de una pequeña empresa.</p>
+                    </div>
+                </div>
+                <div class="BotonAzul"><div class="botonSolicita">SOLICITA TU TARJETA<i class="fa fa-angle-right fa-fw fa-lg"></i></div></div>
+            </div>
+            
+        </div>
+        
+        <div class="contenidos" id="info3">    <!--***** INFO 3 *****-->
+            <h1 class="tituloHome">The platinum Card® American Express®</h1>
+            <p class="parrafoHome">Disfruta un mundo de privilegios exclusivos para clientes excepcionales.</p>
+            
+            <div class="menuTabs">
+                <div id="1"><img src="img/check.svg" alt="check"><p>Qué ventajas me ofrece la tarjeta  American Express® Gold</p></div>
+                <div id="2"><img src="img/check.svg" alt="check"><p>Además cuentas con los siguientes beneficios</p></div>
+                <div id="3"><img src="img/check.svg" alt="check"><p>Para solicitarla necesitas cumplir estos requisitos</p></div>
+            </div>
+            <div class="contenido1">
+                <img src="img/cPlat.png" alt="The platinum Card American Express">
+                <div>
+                    <i class="fa fa-angle-right fa-fw"></i><p>Puedes usarla en toda la red de establecimientos American Express® alrededor del Mundo.</p>
+                    <i class="fa fa-angle-right fa-fw"></i><p>Diferentes formas de pago: Al contado, pagando el mínimo o hasta en 36 cuotas fijas.</p>
+                    <i class="fa fa-angle-right fa-fw"></i><p>Puedes pagar tu Tarjeta por la banca por internet, banca móvil, en la red de tiendas Interbank a nivel nacional, cajas de Vivanda, Plaza Vea y en los cajeros Plus Global Net.</p>
+                    <i class="fa fa-angle-right fa-fw"></i><p>Solicita hasta 8 tarjetas adicionales de manera gratuita y elige el límite de crédito de cada una.</p>
+                    <i class="fa fa-angle-right fa-fw"></i><p>Compra por Internet con total seguridad. </p>
+                </div>
+                <div class="BotonAzul"><div class="botonSolicita">SOLICITA TU TARJETA<i class="fa fa-angle-right fa-fw fa-lg"></i></div></div>
+            </div>
+            <div class="contenido2">
+                <div class="con2Scroll mCustomScrollbar">
+                    <h2>1. Servicio Concierge:</h2>
+                    <p class="sangria">The Platinum Card® de American Express®  busca hacerte la vida más fácil, por eso pone a tu disposición la unidad de Servicio Concierge, un asistente personal las 24 horas del día que cuida de todos los detalles como si lo hicieras tú mismo, brindándote soporte y las mejores alternativas de acuerdo a tus necesidades. Este servicio te ofrece organizar todo lo que necesitas, sea por falta de tiempo, expertise o contactos en los siguientes rubros: Viajes, Gastronomía, Entretenimiento, Compras y Elite Sports.
+Accede a este servicio llamando al 311-9090 lima y 0-801-00-101 provincias</p>
+                    <h2>2. Programa de Recompensas:</h2>
+                    <i class="fa fa-angle-right fa-fw"></i><p>El programa de puntos más flexible de todo el mercado.  Canjea puntos o millas con total facilidad.</p>
+                    <i class="fa fa-angle-right fa-fw"></i><p>El programa de puntos más prestigioso y flexible de todo el mercado.</p>
+                    <i class="fa fa-angle-right fa-fw"></i><p>Acumula 2 puntos por cada S/.3.00.</p>
+                    
+                    <div class="vinetas">
+                        <p><i class="fa fa-plane fa-fw"></i>Viaja</p>
+                        <p>Transfiere tus puntos a millas de <br>Avianca y otras aerolíneas.</p>
+                    </div>
+                    <div class="vinetas">
+                        <p><i class="fa fa-gift fa-fw"></i>Canjear</p>
+                        <p>Ingresa a www.membershiprewards.pe <br>y descubre lo que puedes canjear</p>
+                    </div>
+                    <div class="vinetas">
+                        <p><i class="fa fa-money fa-fw"></i>Compra</p>
+                        <p>Usa tus puntos como efectivo en los <br>establecimientos asociados. </p>
+                    </div>
+                    
+                    <i class="fa fa-angle-right fa-fw"></i><p>Puedes transferir a millas de las Aerolíneas: Taca, Avianca, KLM, Air France, Delta Airlines y Tam. Si no tienes tu número de pasajero frecuente solo debes inscribirte en sus páginas web, ¡no te tomará más de 10 minutos! Solo llama al (01) 311-9090</p>
+                    <i class="fa fa-angle-right fa-fw"></i><p>Conoce los establecimientos afiliados para comprar con puntos <a href="#">AQUÍ</a></p>
+                    <i class="fa fa-angle-right fa-fw"></i><p>Para canjear productos y más entra a www.membershiprewards.pe, elige el producto que más te gusta y llama al  (01) 311-9090. <br>
+Para mayor información visita www.membershiprewards.pe.</p>
+                    <h2>3. Programa de seguros:</h2>
+                    <i class="fa fa-angle-right fa-fw"></i><p><strong>Seguro de protección de compras:</strong></p>
+                    <p class="sangria">Compra con tranquilidad con The Platinum Card® de American Express®  gracias al seguro de compra protegida en caso de robo o daño del bien. <br>Tiene hasta 90 días después de haber realizado la compra para poder hacer uso de este seguro (el articulo tiene que haber sido comprado con la tarjeta). <br>
+Cobertura: US$ 5,000 por incidente, hasta US$ 5,000 por año.</p>
+                    <i class="fa fa-angle-right fa-fw"></i><p><strong>Seguros de viajes:</strong></p>
+                    <p class="sangria">Al pagar la totalidad de tu viaje con tu tarjeta The Platinum Card® American Express®, tú, tu conyugue e hijos menores de 23 años cuentan con un seguro en caso de muerte accidental o incapacidad permanente si estas viajando en avión, tren, barco o autobús. <br>
+Cobertura: hasta por US$1´000,000 <br><br>
+Además cuentas con estos seguros:</p>
+                    
+                    <div class="tablaIzq">
+                       <i class="fa fa-angle-right fa-fw"></i><p><strong>Accidentes en viajes</strong></p>
+                       <i class="fa fa-angle-right fa-fw"></i><p><strong>Asistente de viajes</strong></p><br><br><br><br>
+                       <p class="conSpace">Pérdida de equipaje</p>
+                        <p class="conSpace">Demora e equipaje</p>
+                        <p class="conSpace">Demora de vuelo</p>
+                        <p class="conSpace">Pérdida de conexión</p>
+                        <p class="conSpace">Cancelación de viajes</p>
+                        <p class="conSpace">Seguro de vehículo alquilado (CDW)</p>
+                    </div>
+                    <div class="tablaDer">
+                       <i class="fa fa-angle-right fa-fw"></i><p><strong>US$ 1'000,000</strong></p>
+                   
+                       <i class="fa fa-angle-right fa-fw"></i><p><strong>Europa (Tratado Schengen): US$ 30,000</strong></p><br><br>
+                        <p class="conSpace"><strong>Mundial: US$ 150,000</strong></p><br><br>
+                        <p class="conSpace">US$ 3,000</p>
+                        <p class="conSpace">US$ 500</p>
+                        <p class="conSpace">US$ 200</p>
+                        <p class="conSpace">US$ 200</p>
+                        <p class="conSpace">US$ 2,000</p>
+                        <p class="conSpace"><strong>Mundial: US$ 75,000</strong></p>
+                    </div>
+                   
+                    <i class="fa fa-angle-right fa-fw"></i><p>Encuentra más detalle de los seguros <a href="#">AQUí</a></p>
+                    <br>
+                    <h2>4. PriorityPass:</h2>
+                    <p class="sangria">Disfruta del confort y tranquilidad de los más de 700 salones VIP en aeropuertos del extranjero y del Espigón Internacional del Aeropuerto Jorge Chavez* gracias a tu Priority Pass. 
+Puedes usar este servicio las veces que quieras sin costo alguno junto con un acompañante. Para acceder al beneficio de manera gratuita solo necesitas consumir con su TC los 6 meses previos a la visita de los salones VIP.  Para mayor información sobre condiciones, horarios y beneficios de cada sala VIP, entra a www.prioritypass.com. 
+Para el caso de las salas de vuelos nacionales dentro de Perú, el ingreso tiene un cargo de US$ 27.   </p>
+                    <h2>5.Acceso a salones American Express®</h2>
+                    <p class="sangria">Podrás acceder a los salones exclusivos para clientes American Express® en los aeropuertos de Estados Unidos, Argentina, Brasil, India y México.
+                    <h2>6.Pasaporte Amex: </h2>
+                    <p class="sangria">También te ofrecemos el “Pasaporte Amex “, un portal de American Express que te brinda promociones especiales alrededor del mundo en restaurantes, hoteles, eventos y compras. 
+<br>Descubre las ofertas que tenemos para ti en la web: <a href="#">www.pasaporteamex.com</a></p>
+                </div>
+                <div class="BotonAzul"><div class="botonSolicita">SOLICITA TU TARJETA<i class="fa fa-angle-right fa-fw fa-lg"></i></div></div>
+            </div>
+            <div class="contenido3">
+               <div class="con3Scroll mCustomScrollbar">
+                    <img src="img/cPlat.png" alt="American Express">
+                    <div class="divDerecha">
+                        <i class="fa fa-angle-right fa-fw"></i><p>Tener entre 21 y 75 años de edad.</p>
+                        <i class="fa fa-angle-right fa-fw"></i><p>Ingreso bruto mínimo mensual personal de S/. 4,000.</p>
+                        <i class="fa fa-angle-right fa-fw"></i><p>Más de 6 meses de experiencia crediticia con buen comportamiento de pago.</p>
+                        <i class="fa fa-angle-right fa-fw"></i><p>Antigüedad laboral mayor a un (1) año.</p>
+                        <i class="fa fa-angle-right fa-fw"></i><p>Fotocopia de documento de identidad.</p>
+                        <i class="fa fa-angle-right fa-fw"></i><p>Último recibo de pago de luz cancelado.</p>
+                    </div>
+                    <div class="divNormal">
+                        <p>Además, si eres:</p>
+                        <h2>Dependiente</h2>
+                        <p>Última boleta de pago si recibes un ingreso fijo ó 3 últimas si tu ingreso es variable.</p>
+                        <h2>Independiente</h2>
+                        <p>Dos (2) últimas declaraciones anuales de impuesto a la renta de 4ta categoría y recibos por honorarios profesionales y/o pagos a Sunat de los últimos 3 meses.</p>
+                        <p>Dos (2) últimas declaraciones juradas del impuesto a la renta, contratos de alquiler, copia de autovalúo o propiedad arrendada y 2 últimos pagos a la Sunat, si eres rentista. </p>
+                        <p>Copia de la constitución de la empresa, última declaración jurada de la empresa o ficha registral, estado de cuenta corriente de la empresa y 3 últimos pagos de IGV, si eres accionista de una pequeña empresa.</p>
+                    </div>
+                </div>
+                <div class="BotonAzul"><div class="botonSolicita">SOLICITA TU TARJETA<i class="fa fa-angle-right fa-fw fa-lg"></i></div></div>
+            </div>
+            
+        </div>
+
+	<div class="botonBajar"><i id="flecha1" class="fa fa-chevron-down fa-fw fa-lg"></i><i id="flecha2" class="fa fa-chevron-down fa-fw fa-lg"></i></div>
+
+	</div>	
+
+	<!------- SECTION 2 ------->
+	<div class="section" id="section2">
+		<div class="fondoVida"></div>
+		<div class="contenidos" id="c1">
+            <div class="contenido1_S2">
+                <img src="img/nameJacques.png" width="266" height="103" alt="Jacques">
+<!--                <h1 class="tituloHome">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h1>-->
+                <div class="contenidoScroll mCustomScrollbar">
+                    <p>Antes de los 22 años, Jacques Ferrand jamás hubiera imaginado que acabaría convirtiéndose en uno de los fotógrafos de moda más reconocidos del país. Ni siquiera que se dedicaría a eso. Cuando acabó el colegio, sin tenerlo claro, comenzó a estudiar Administración y Marketing. Lo dejó y se pasó a la carrera de Publicidad. Recién ahí llegó su revelación. Para un curso, se tuvo que encargar de las fotos de una campaña publicitaria. Le pidió a un amigo que le prestara su cámara y empezó una travesía sin retorno. Se enamoró del resultado instantáneo de las fotografías y se sintió a gusto con el trabajo que había detrás. Se compró su propia cámara y jamás se separó de ella. Ni en el baño. Poco después entró a Fstudio, de su tío Javier Ferrand, y aprendió los trucos necesarios del oficio. Un día la revista Cosas le propuso trabajar una editorial, la primera de su carrera, y Jacques no perdió la oportunidad. A esta le siguieron muchas más, para otras revistas, como Somos, Hola, Priveé, Vogue y GQ. Jacques ha trabajado también para marcas como Puma, Sybilla y Crepier. <br>Antes de los 22 años, Jacques Ferrand jamás hubiera imaginado que acabaría convirtiéndose en uno de los fotógrafos de moda más reconocidos del país. Ni siquiera que se dedicaría a eso. Cuando acabó el colegio, sin tenerlo claro, comenzó a estudiar Administración y Marketing. Lo dejó y se pasó a la carrera de Publicidad. Recién ahí llegó su revelación. Para un curso, se tuvo que encargar de las fotos de una campaña publicitaria. Le pidió a un amigo que le prestara su cámara y empezó una travesía sin retorno. Se enamoró del resultado instantáneo de las fotografías y se sintió a gusto con el trabajo que había detrás. Se compró su propia cámara y jamás se separó de ella. Ni en el baño. Poco después entró a Fstudio, de su tío Javier Ferrand, y aprendió los trucos necesarios del oficio. Un día la revista Cosas le propuso trabajar una editorial, la primera de su carrera, y Jacques no perdió la oportunidad. A esta le siguieron muchas más, para otras revistas, como Somos, Hola, Priveé, Vogue y GQ. Jacques ha trabajado también para marcas como Puma, Sybilla y Crepier. Hoy está a la cabeza de un proyecto llamado</p>
+                </div>
+                <div class="botonM" id="btnInicio">VER VIDEO <i class="fa fa-angle-right fa-fw fa-lg"></i></div>
+                <div class="BotonAzul"><a class="botonSolicita" href="#">SOLICITA TU TARJETA<i class="fa fa-angle-right fa-fw fa-lg"></i></a></div>
+                <p class="parrafoHome">Tarjeta American Express®</p>
+                <img class="fotoC" src="img/cExp.png" alt="American Express">
+            </div>
+        </div>
+        <div class="contenidos" id="c2">
+            <div class="contenido1_S2">
+                <img src="img/nameBentin.png" width="166" height="104" alt="Bentin">
+<!--                <h1 class="tituloHome">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h1>-->
+               <div class="contenidoScroll mCustomScrollbar">
+                    <p>Cuando estaba en el colegio, el artista plástico Abel Bentín se escapaba de algunas clases y se iba hasta el Centro de Lima. Ahí conseguía que algunos vigilantes le abrieran las rejas de casonas y edificaciones antiguas, y se metía en ellas para asombrarse de la arquitectura y las imágenes que regalaban. Ese contacto con la historia escondida y decadente de su ciudad tendría un efecto en su trabajo muchos años después. Abel estuvo desde siempre ligado al arte. Empezó como ilustrador. Dibujaba personajes oscuros y en escenas cargadas de ironía. Al salir del colegio ingresó a la Facultad de Artes de la Universidad Católica, de donde se graduó con el primer puesto en la especialidad de Pintura. Esto provocó que, sólo unos meses después de acabar sus estudios, muchas galerías se ofrecieran para representarlo. Con una mente que no para de producir ideas y unas manos que no dejan de trabajar, ha llevado su arte por distintas formas. Hoy dedica más horas de su tiempo a las esculturas y las instalaciones. Actualmente es representado por la galería González y González, donde presentó su más reciente muestra individual:<br>Cuando estaba en el colegio, el artista plástico Abel Bentín se escapaba de algunas clases y se iba hasta el Centro de Lima. Ahí conseguía que algunos vigilantes le abrieran las rejas de casonas y edificaciones antiguas, y se metía en ellas para asombrarse de la arquitectura y las imágenes que regalaban. Ese contacto con la historia escondida y decadente de su ciudad tendría un efecto en su trabajo muchos años después. Abel estuvo desde siempre ligado al arte. Empezó como ilustrador. Dibujaba personajes oscuros y en escenas cargadas de ironía. Al salir del colegio ingresó a la Facultad de Artes de la Universidad Católica, de donde se graduó con el primer puesto en la especialidad de Pintura. Esto provocó que, sólo unos meses después de acabar sus estudios, muchas galerías se ofrecieran para representarlo. Con una mente que no para de producir ideas y unas manos que no dejan de trabajar, ha llevado su arte por distintas formas. Hoy dedica más horas de su tiempo a las esculturas y las instalaciones. Actualmente es representado por la galería González y González, donde presentó su más reciente muestra individual.</p>
+                </div>
+                <div class="botonM" id="btnInicio">VER VIDEO <i class="fa fa-angle-right fa-fw fa-lg"></i></div>
+                <div class="BotonAzul"><a class="botonSolicita" href="#">SOLICITA TU TARJETA<i class="fa fa-angle-right fa-fw fa-lg"></i></a></div>
+                <p class="parrafoHome">Tarjeta American Express® Gold</p>
+                <img class="fotoC" src="img/cGold.png" alt="American Express Gold">
+            </div>
+        </div>
+        <div class="contenidos" id="c3">
+            <div class="contenido1_S2">
+                <img src="img/nameAni.png" width="474" height="67" alt="Ani">
+<!--                <h1 class="tituloHome">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h1>-->
+                <div class="contenidoScroll mCustomScrollbar">
+                    <p>A los 15 años, Ani Álvarez Calderón ya tenía claro que  le encantaba la ropa. Su madre, que siempre llenó de arte su casa, no dejaba de llevarla al teatro y al ballet. Ahí ella se quedaba maravillada con los vestuarios. Como en Perú las escuelas de moda son un fenómeno reciente, Ani se inscribió en cursos que estuvieran relacionados con lo que quería, antes de viajar finalmente a Estados Unidos para estudiar Diseño. A los 16 años empezó a meterse a talleres de costura, escultura, dibujo, figura humana. Todo lo que pudiera sumar a aquello que de verdad  la apasionaba. Por eso, cuando inició sus estudios en el Rhode Island School of Design, Ani no tardó en convertirse en alumna destacada. Siempre con el Perú en la cabeza, su trabajo no dejó de inspirarse en las culturas ancestrales de su país. Así fue que, en su primer desfile, en el Fashion Week de Miami de 2000, presentó una colección inspirada en los arcángeles de los reconocidos cuadros cusqueños de la Colonia. El resultado no pudo ser mejor: los asistentes la ovacionaron de pie y ella salió entre lágrimas a recibir los aplausos del público.<br>A los 15 años, Ani Álvarez Calderón ya tenía claro que  le encantaba la ropa. Su madre, que siempre llenó de arte su casa, no dejaba de llevarla al teatro y al ballet. Ahí ella se quedaba maravillada con los vestuarios. Como en Perú las escuelas de moda son un fenómeno reciente, Ani se inscribió en cursos que estuvieran relacionados con lo que quería, antes de viajar finalmente a Estados Unidos para estudiar Diseño. A los 16 años empezó a meterse a talleres de costura, escultura, dibujo, figura humana. Todo lo que pudiera sumar a aquello que de verdad  la apasionaba. Por eso, cuando inició sus estudios en el Rhode Island School of Design, Ani no tardó en convertirse en alumna destacada. Siempre con el Perú en la cabeza, su trabajo no dejó de inspirarse en las culturas ancestrales de su país. Así fue que, en su primer desfile, en el Fashion Week de Miami de 2000, presentó una colección inspirada en los arcángeles de los reconocidos cuadros cusqueños de la Colonia. El resultado no pudo ser mejor: los asistentes la ovacionaron de pie y ella salió entre lágrimas a recibir los aplausos del público. Su nombre es ahora uno de  </p>
+                </div>
+                <div class="botonM" id="btnInicio">VER VIDEO <i class="fa fa-angle-right fa-fw fa-lg"></i></div>
+                <div class="BotonAzul"><a class="botonSolicita" href="#">SOLICITA TU TARJETA<i class="fa fa-angle-right fa-fw fa-lg"></i></a></div>
+                <p class="parrafoHome">The platinum Card® American Express®</p>
+                <img class="fotoC" src="img/cPlat.png" alt="American Express Gold">
+            </div>
+        </div>
+	</div>
+</div>
+
+
+
+</body>
+</html>
