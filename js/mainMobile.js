@@ -394,22 +394,7 @@ $(document).ready(function(){
         TweenMax.to($cat.find($irA), $time, {css:{opacity:1}, delay:0.2});
         TweenMax.from($cat.find($irA), $time, {css:{marginTop:150}, ease:Back.easeOut, delay:0.2});
 
-		/*$cat.hover(function(){
-			$me = $(this);
-			TweenMax.to($cat, $time, {css:{height:'30%'}});
-			TweenMax.to($me, $time, {css:{height:'40%'}});
-            
-			TweenMax.to($me.find($('img')), 0.4, {css:{scale:1.2, marginTop:20}, ease:Back.easeOut});
-
-			TweenMax.to($me.find($('.velo')), $time, {css:{opacity:0},onComplete:function(){
-			}});
-
-		}, function(){
-			$me = $(this);
-			TweenMax.to($cat, $time, {css:{height:'33.33%'}});
-			TweenMax.to($me.find($('img')), 0.4, {css:{scale:1, marginTop:0}, ease:Back.easeOut});
-			TweenMax.to($me.find($('.velo')), $time, {css:{opacity:1}});
-		});*/
+		
 	}
 
 	$('#fullpage').fullpage({
