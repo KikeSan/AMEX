@@ -431,6 +431,7 @@ sup {
 
 sup {
     top: -0.5em;
+    font-size: 12px;
 }
 
 sub {
@@ -1754,109 +1755,109 @@ video.videoLoop {
         width: 260px;
     }
     /*************** contenidos SECTION 1 **************/
-    .contenido1{
-        width: 100%;
-        height: 408px;
-        text-align: left;
-        font-size: 14px;
-        font-family: 'BentonSansCondBook';
-        color: white;
-        letter-spacing: -0.1px;
-        float: left;
-        position: absolute;
-    }
-    .contenido1>img{
-        margin: 21px 0 0 0;
-        float: left;
-    }
-    .contenido1>div{
-        margin: 25px 0 0 25px;
-        float: left;
-        width: 680px;
-    }
-    .contenido1>div>p{
-        margin: 0px 0 9px 0;
-        float: left;
-        width: 662px;
-    }
-    .contenido1>div>i{
-        float: left;
-          
-    }
-    .contenido1>.BotonAzul{
-        right: 0px;
-        width: 280px;
-    }
-    /**/
     .contenido2{
         width: 100%;
         height: 408px;
         text-align: left;
-        font-size: 14px;
+        font-size: 16px;
         font-family: 'BentonSansCondBook';
         color: white;
         letter-spacing: -0.1px;
         float: left;
         position: absolute;
     }
-    .contenido2 h2{
+    .contenido2>img{
+        margin: 21px 0 0 0;
+        float: left;
+    }
+    .contenido2>div{
+        margin: 25px 0 0 25px;
+        float: left;
+        width: 680px;
+    }
+    .contenido2>div>p{
+        margin: 0px 0 9px 0;
+        float: left;
+        width: 650px;
+    }
+    .contenido2>div>i{
+        float: left;
+          
+    }
+    .contenido2>.BotonAzul{
+        right: 0px;
+        width: 280px;
+    }
+    /**/
+    .contenido1{
+        width: 100%;
+        height: 408px;
+        text-align: left;
+        font-size: 16px;
+        font-family: 'BentonSansCondBook';
+        color: white;
+        letter-spacing: -0.1px;
+        float: left;
+        position: absolute;
+    }
+    .contenido1 h2{
         margin: 15px 0px 15px 0px !important;
         width: 600px;
         display: -webkit-box;
         position: relative;
         top: 8px;
     }
-    .contenido2>img{
+    .contenido1>img{
         margin: 21px 0 0 0;
         float: left;
     }
-    .contenido2>.con2Scroll{
+    .contenido1>.con2Scroll{
         float: right;
         position: absolute;
         right: 0px;
         overflow: auto;
-        margin: 14px 0 0 13px !important;
+        margin: 22px 0 0 13px !important;
         width: 650px;
         height: 250px;
         -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
         text-align: justify;
         display: none;
     }
-    .contenido2 p{
-        margin: 0px 0px 0px 0px;
+    .contenido1 p{
+        margin: 0 0 10px 0;
         float: left !important;
-        width: 600px;
+        width: 596px;
     }
-    .contenido2 a{
+    .contenido1 a{
         color: white;
     }
-    .contenido2 .con2Scroll i{
+    .contenido1 .con2Scroll i{
         float: left !important;
           
     }
-    .contenido2>.BotonAzul{
+    .contenido1>.BotonAzul{
         right: 0px;
         width: 280px;
         bottom: 15px;
     }
     
-    .contenido2 .sangria{
+    .contenido1 .sangria{
         left: 18px;
         position: relative;
         width: 600px;
         margin: 3px 10px 0px 0px;
     }
-    .contenido2>ul{
+    .contenido1>ul{
         position: absolute;
         width: 300px;
         list-style-type: none;
         margin: 35px 0px 0px;
         padding: 0px;
     }
-    .contenido2>ul>li{
+    .contenido1>ul>li{
         text-decoration: none;
     }
-    .contenido2>ul>li>p{
+    .contenido1>ul>li>p{
         font-family: 'BentonSansCondMedium';
         font-size: 20px;
         margin-bottom: 15px;
@@ -1869,7 +1870,7 @@ video.videoLoop {
         width: 100%;
         height: 408px;
         text-align: left;
-        font-size: 14px;
+        font-size: 16px;
         font-family: 'BentonSansCondBook';
         color: white;
         letter-spacing: -0.1px;
@@ -1943,7 +1944,7 @@ video.videoLoop {
         margin: 15px 0 15px 0;
     }
     .tablaDer>p{
-        width: 340px;
+        width: 330px;
     }
     .tablaDer>.conSpace{
         width: 100%;
