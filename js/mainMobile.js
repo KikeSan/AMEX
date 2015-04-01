@@ -147,10 +147,10 @@ $(document).ready(function(){
             TweenMax.to($me, 0.5, {css: {'display':'block', marginTop: -290, opacity:1 }, delay:0.7, ease:Power3.easeOut});
             /*TweenMax.to($('#section1 .contenidos'), 0, {css: { marginTop: 0, opacity:0 }});
             TweenMax.to($('#section1 .contenidos'), 0.5, {css: { marginTop: -290, opacity:1 }, delay:0.7, ease:Power3.easeOut});*/
-
+            
             TweenMax.to($('.menuDerecha').find($('div p')), 0.5, {css:{opacity:0}});
             TweenMax.to($('.menuDerecha'), 0.5, {css: { right: 60 }, delay:0.8, ease:Power1.easeOut});
-
+            
             TweenMax.to($('.menuDerecha div:first-child #activado'), 0.5, {css:{opacity:1}});
             TweenMax.to($('.menuDerecha div:last-child #activado'), 0.5, {css:{opacity:0}});
             
@@ -158,32 +158,38 @@ $(document).ready(function(){
             TweenMax.to($('.menuDerecha div:last-child #normal'), 0.5, {css:{opacity:1}});
             
             /*$('.terminos p').css('color', opColorArray[op]);*/
-
+            
             /***********************************************   TABS CONTENIDOS  ****************************************/
 
     //        pintaTab(localStorage.getItem("opTab"));
 
             function pintaTab(tb,opc){
                 $('.terminos p').css('opacity', 0);
-//                console.log("OPC en pintaTab: "+opc);
+                console.log("OPC en pintaTab: "+tb);
+                
+                for(var n=1;n<=3;n++){
+                    if(n!=tb){
+                        TweenMax.to($('#section1 #info'+opc+' .menuTabs #'+n), 0.6, {css:{'backgroundColor':'rgba(146,205,137, 0)'}, ease:Expo.easeOut});
+                    }
+                }
                 
                 if(opc==1){
                     $me.find('.menuTabs #'+tb).css('border-color', 'rgba(169,238,159, 0.5)'); 
                     $me.find('.menuTabs div').css('border-color', 'rgba(169,238,159, 0.5)');
                     $me.find('.menuTabs #'+tb).css('backgroundColor', 'rgba(146,205,137, 0.5)');
-                    if(TabPrev!=tb){TweenMax.to($('#section1 #info'+opc+' .menuTabs #'+TabPrev), 0.6, {css:{'backgroundColor':'rgba(146,205,137, 0)'}, ease:Expo.easeOut});}
+                    //if(TabPrev!=tb){TweenMax.to($('#section1 #info'+opc+' .menuTabs #'+TabPrev), 0.6, {css:{'backgroundColor':'rgba(146,205,137, 0)'}, ease:Expo.easeOut});}
                     $me.find('.tituloHome').css('color', '#92cd89');
                 }else if(opc==2){
                     $me.find('.menuTabs #'+tb).css('border-color', 'rgba(241,206,122, 0.5)'); 
                     $me.find('.menuTabs div').css('border-color', 'rgba(241,206,122, 0.5)');
                     $me.find('.menuTabs #'+tb).css('backgroundColor', 'rgba(227,179,79, 0.5)');
-                    if(TabPrev!=tb){TweenMax.to($('#section1 #info'+opc+' .menuTabs #'+TabPrev), 0.6, {css:{'backgroundColor':'rgba(227,179,79, 0)'}, ease:Expo.easeOut});}
+                    //if(TabPrev!=tb){TweenMax.to($('#section1 #info'+opc+' .menuTabs #'+TabPrev), 0.6, {css:{'backgroundColor':'rgba(227,179,79, 0)'}, ease:Expo.easeOut});}
                     $me.find('.tituloHome').css('color', '#f1ce7a');
                 }else if(opc==3){
                     $me.find('.menuTabs #'+tb).css('border-color', 'rgba(255,255,255, 0.5)'); 
                     $me.find('.menuTabs div').css('border-color', 'rgba(255,255,255, 0.5)'); 
                     $me.find('.menuTabs #'+tb).css('backgroundColor', 'rgba(204,204,204, 0.5)');
-                    if(TabPrev!=tb){TweenMax.to($('#section1 #info'+opc+' .menuTabs #'+TabPrev), 0.6, {css:{'backgroundColor':'rgba(204,204,204, 0)'}, ease:Expo.easeOut});}
+                    //if(TabPrev!=tb){TweenMax.to($('#section1 #info'+opc+' .menuTabs #'+TabPrev), 0.6, {css:{'backgroundColor':'rgba(204,204,204, 0)'}, ease:Expo.easeOut});}
                     $me.find('.tituloHome').css('color', '#a1a1a1');
                 }
     //            $me.find('.menuTabs #'+tb).css('backgroundColor', 'rgba(227,179,79, 0.5)');
@@ -192,6 +198,7 @@ $(document).ready(function(){
                 if(tb==1){
                     $me.find('.contenido2').css('display', 'none');
                     $me.find('.contenido3').css('display', 'none');
+                    //pintaInfoProgramas(1,op);
                 }
 //                console.log("LOCALSTORAGE TAB: "+tb+" TabPrev:"+TabPrev);
                 
@@ -220,58 +227,67 @@ $(document).ready(function(){
                             }
                         }
                     })  
-
+                
              }
             
             pintaTab(1,op);
 
-            $me.find('.menuTabs #1').click(function(){ if(TabPrev!=1){ /*localStorage.setItem("opTab", 1);*/   pintaTab(1,op); }});
-            $me.find('.menuTabs #2').click(function(){ if(TabPrev!=2){ /*localStorage.setItem("opTab", 2);*/   pintaTab(2,op); }});
-            $me.find('.menuTabs #3').click(function(){ if(TabPrev!=3){ /*localStorage.setItem("opTab", 3);*/   pintaTab(3,op); }});
+            $me.find('.menuTabs #1').click(function(){ if(TabPrev!=1){ pintaTab(1,op); }});
+            $me.find('.menuTabs #2').click(function(){ if(TabPrev!=2){ pintaTab(2,op); }});
+            $me.find('.menuTabs #3').click(function(){ if(TabPrev!=3){ pintaTab(3,op); }});
             
-            /*----------  MENU PROGRAMAS  --------------*/
-            
+            /*--------------------------------  MENU PROGRAMAS  ------------------------------------*/
+
             /**
              * Pinta el contenido del menu del primer tab en cada seccion
              * @param {Number} val     menu seleccionado
              * @param {Number} opColor color a pintar del array opColorArray
              */
             function pintaInfoProgramas(val,opColor){
+                //console.log("Entro a pintar info de programas");
                 /*var $cantLi = $('.contenido2 #ul'+opColor+' li').size();
                 for(var i=1;i<=$cantLi;i++){
                     $me.find('.contenido2 #ul'+opColor+' li #'+i).css('color','#fff !important');
                     console.log("CANTIDAD de LI - "+$cantLi);
                 }*/
-//                $me.find('.contenido2 ul li #' + prevValor).css('color','#fff !important');
-                TweenMax.to($('#section1 #info'+op+' .contenido1 ul li #' + prevValor), 0.8, {css:{'color':'#ffffff'}, ease:Expo.easeOut});
-                TweenMax.to($('#section1 #info'+op+' .contenido1 ul li #' + val), 0.8, {css:{'color':opColorArray[opColor]}, ease:Expo.easeOut});
-//                $me.find(' .contenido2 ul li #' + val).css('color',opColorArray[opColor]);
-                console.log("COLOR PREV: "+prevValor+' current: '+val);
-                
+                //                $me.find('.contenido2 ul li #' + prevValor).css('color','#fff !important');
+                //TweenMax.to($('#section1 #info'+op+' .contenido1 ul li #' + prevValor), 0.8, {css:{'color':'#ffffff'}, ease:Expo.easeOut});
+                //                $me.find(' .contenido2 ul li #' + val).css('color',opColorArray[opColor]);
+                //console.log("COLOR PREV: "+prevValor+' current: '+val);
+
                 /*$me.find(' .contenido2 #itm0' + val).css('display','block');
                 $me.find(' .contenido2 #itm0' + prevValor).css('display','none');*/
-                TweenMax.to($('#section1 #info'+op+' .contenido1 #itm0' + prevValor), 0.4, {css:{'display':'none', opacity:0}, ease:Expo.easeOut});
-                TweenMax.to($('#section1 #info'+op+' .contenido1 #itm0' + val), 0.5, {css:{'display':'block', opacity:1}, delay:0.4 , ease:Expo.easeOut});
                 
+                
+                for(var m=1;m<=6;m++){
+                    TweenMax.to($('#section1 #info'+op+' .contenido1 #itm0' + m), 0.4, {css:{'display':'none', opacity:0}, ease:Expo.easeOut});
+                    TweenMax.to($('#section1 #info'+op+' .contenido1 ul li #' + m), 0.8, {css:{'color':'#ffffff'}, ease:Expo.easeOut});
+                }
+                
+                TweenMax.to($('#section1 #info'+op+' .contenido1 ul li #' + val), 0.8, {css:{'color':opColorArray[opColor]}, ease:Expo.easeOut});
+                
+                //TweenMax.to($('#section1 #info'+op+' .contenido1 #itm0' + prevValor), 0.4, {css:{'display':'none', opacity:0}, ease:Expo.easeOut});
+                TweenMax.to($('#section1 #info'+op+' .contenido1 #itm0' + val), 0.5, {css:{'display':'block', opacity:1}, delay:0.4 , ease:Expo.easeOut});
+
                 prevValor = val;
 
                 $('#section1 #info'+op+' .contenido1').find('.itemMenu').hover(function(){   
-                        if($(this).attr("id")!=prevValor){
-                            document.body.style.cursor='pointer'; 
-//                            $(this).css('color', opColorArray[opColor]);
-                            TweenMax.to($(this), 0.7, {css:{'color':opColorArray[opColor]}, ease:Expo.easeOut});
-                        }
-                    }, function(){    
-                        if($(this).attr("id")!=prevValor){
-                            document.body.style.cursor='default'; 
-//                            $(this).css('color', '#fff');  
-                            TweenMax.to($(this), 1, {css:{'color':'#fff'}, ease:Expo.easeOut});
-                        }
-                    })
-                
+                    if($(this).attr("id")!=prevValor){
+                        document.body.style.cursor='pointer'; 
+                        //$(this).css('color', opColorArray[opColor]);
+                        TweenMax.to($(this), 0.7, {css:{'color':opColorArray[opColor]}, ease:Expo.easeOut});
+                    }
+                }, function(){    
+                    if($(this).attr("id")!=prevValor){
+                        document.body.style.cursor='default'; 
+                        //$(this).css('color', '#fff');  
+                        TweenMax.to($(this), 1, {css:{'color':'#fff'}, ease:Expo.easeOut});
+                    }
+                })
+
                 $('.terminos p').css('color', opColorArray[op]);
                 $('.terminos p').css('opacity', 0);
-                console.log("attr obs: "+$('#section1 #info'+op+' .contenido1 #'+val).attr("obs"));
+                //console.log("attr obs: "+$('#section1 #info'+op+' .contenido1 #'+val).attr("obs"));
                 if($('#section1 #info'+op+' .contenido1 #'+val).attr("obs")==1){
                     TweenMax.to($('.terminos p'), 0.5, {css:{opacity:1}, delay:0.5, ease:Expo.easeOut});
                 }else{
