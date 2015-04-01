@@ -156,12 +156,15 @@ $(document).ready(function(){
             
             TweenMax.to($('.menuDerecha div:first-child #normal'), 0.5, {css:{opacity:0}});
             TweenMax.to($('.menuDerecha div:last-child #normal'), 0.5, {css:{opacity:1}});
+            
+            /*$('.terminos p').css('color', opColorArray[op]);*/
 
             /***********************************************   TABS CONTENIDOS  ****************************************/
 
     //        pintaTab(localStorage.getItem("opTab"));
 
             function pintaTab(tb,opc){
+                $('.terminos p').css('opacity', 0);
 //                console.log("OPC en pintaTab: "+opc);
                 
                 if(opc==1){
@@ -265,6 +268,15 @@ $(document).ready(function(){
                             TweenMax.to($(this), 1, {css:{'color':'#fff'}, ease:Expo.easeOut});
                         }
                     })
+                
+                $('.terminos p').css('color', opColorArray[op]);
+                $('.terminos p').css('opacity', 0);
+                console.log("attr obs: "+$('#section1 #info'+op+' .contenido1 #'+val).attr("obs"));
+                if($('#section1 #info'+op+' .contenido1 #'+val).attr("obs")==1){
+                    TweenMax.to($('.terminos p'), 0.5, {css:{opacity:1}, delay:0.5, ease:Expo.easeOut});
+                }else{
+                    $('.terminos p').css('opacity', 0);
+                }
             }
             
             pintaInfoProgramas(1,op);

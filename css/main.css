@@ -2028,6 +2028,32 @@ video.videoLoop {
         right: 225px;
         bottom: 60px;
     }
+
+    .terminos {
+        position: absolute;
+        bottom: 50px;
+        font-size: 12px;
+        float: left;
+        z-index: 100;
+    }
+    .terminos>ul{
+        list-style:none;
+        padding: 0px !important;
+    }
+    .terminos>ul>li{
+        float: left;
+        margin-right: 35px;
+    }
+    .terminos>ul>li>a{
+        text-decoration: none;
+        color: #cbcbcb;
+    }
+    .terminos>ul>li>a:hover{
+        color: #fff;
+    }
+    .terminos>p{
+        margin: 5px 0;
+    }
     
     /*********** SCROLL  *********/
     .contenidoScroll{
@@ -2044,7 +2070,7 @@ video.videoLoop {
     }
     
     /******* ACORDEON ********/
-    
 
 }
+
 
