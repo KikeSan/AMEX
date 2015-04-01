@@ -226,7 +226,6 @@ $(document).ready(function(){
             $me.find('.menuTabs #2').click(function(){ if(TabPrev!=2){ /*localStorage.setItem("opTab", 2);*/   pintaTab(2,op); }});
             $me.find('.menuTabs #3').click(function(){ if(TabPrev!=3){ /*localStorage.setItem("opTab", 3);*/   pintaTab(3,op); }});
             
-            
             /*----------  MENU PROGRAMAS  --------------*/
             
             /**
