@@ -30,6 +30,9 @@ $(document).ready(function(){
         closeMenu();
     });
     
+    /**
+     * Funcion que cierra el menu
+     */
     function closeMenu(){
         TweenMax.to($('.abrirMenu'), 0.25, {css: { opacity: 1 }});
         TweenMax.to($('.conteMenu'), 0.35, {css: { left: -350 }, delay:0.15, ease:Power1.easeOut});
@@ -122,6 +125,11 @@ $(document).ready(function(){
             TweenMax.to($me.find('#flecha2'), 0.4, {opacity:0, ease:Expo.easeOut});
         })  
     
+    
+    /**
+     * Funcion llamada luego de escoger en el home
+     * @param {Number} op valores del 1-3 elegido en el home
+     */
     function irInterna(op){
         if(repInterna==0){
             localStorage.setItem("opcion", op);
@@ -221,6 +229,11 @@ $(document).ready(function(){
             
             /*----------  MENU PROGRAMAS  --------------*/
             
+            /**
+             * Pinta el contenido del menu del primer tab en cada seccion
+             * @param {Number} val     menu seleccionado
+             * @param {Number} opColor color a pintar del array opColorArray
+             */
             function pintaInfoProgramas(val,opColor){
                 /*var $cantLi = $('.contenido2 #ul'+opColor+' li').size();
                 for(var i=1;i<=$cantLi;i++){
