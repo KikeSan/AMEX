@@ -2055,6 +2055,19 @@ video.videoLoop {
         margin: 5px 0;
     }
     
+    .verExp {
+        position: absolute;
+        width: 100%;
+        background-color: #ab9d6d;
+        bottom: 0px;
+        z-index: 10;
+        height: 6px;
+        text-align: center;
+    }
+    .verExp > img{
+        top: -34px;
+        position: absolute;
+    }
     /*********** SCROLL  *********/
     .contenidoScroll{
         overflow: auto;
@@ -2072,5 +2085,3 @@ video.videoLoop {
     /******* ACORDEON ********/
 
 }
-
-
