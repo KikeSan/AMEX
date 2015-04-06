@@ -65,7 +65,7 @@ $(document).ready(function(){
             $('#fullpage #section2 #c'+i).css('opacity', '0');
         }*/
         window.location.href = '#home';  
-        TweenMax.to($('#vExp'), 0.5, {top:$('body').height()-6, ease:Power3.easeOut});
+        cerrarExperiencias();
     }
     /***************************** BOTONES PRINCIPALES *****************************/
     //imagen 1 ****
@@ -132,6 +132,11 @@ $(document).ready(function(){
             TweenMax.to($me.find('#flecha2'), 0.4, {opacity:0, ease:Expo.easeOut});
         })  
     
+    function cerrarExperiencias(){
+        TweenMax.to($('#vExp'), 0.5, {top:$('body').height()-6, ease:Power3.easeOut,onComplete:function(){
+            $('#vExp .rellenoExp').css('height', 1);
+        }});
+    }
     /**
      * Despliega una vista con las experiencias y eventos
      */

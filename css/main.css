@@ -2083,6 +2083,7 @@ video.videoLoop {
     .verExp > .rellenoExp{
         width: 100%;
         background-color: #ab9d6d;
+        overflow: -moz-hidden-unscrollable;
     }
     .verExp .conScroll{
         background-color: #7FFFD4;
