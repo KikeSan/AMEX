@@ -2063,6 +2063,7 @@ video.videoLoop {
         z-index: 10;
         height: 6px;
         text-align: center;
+        margin-left: -96px;
     }
     .verExp > img{
         top: -34px;
