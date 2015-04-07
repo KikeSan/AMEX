@@ -2084,7 +2084,12 @@ video.videoLoop {
         width: 100%;
         background-color: #ab9d6d;
         overflow: -moz-hidden-unscrollable;
+/*        float: left;*/
     }
+    /*.verExp > .rellenoExp img{
+        margin: 0;
+        float: left;
+    }*/
     .verExp .conScroll{
         background-color: #7FFFD4;
         float: right;
